@@ -1,0 +1,261 @@
+    1  cd /home/
+    2  ls
+    3  mkdir solution
+    4  ssh 172.17.0.4
+    5  hostname -i
+    6  ls
+    7  cd solution/
+    8  touch gencsv.sh
+    9  vim gencsv.sh 
+   10  cat gencsv.sh 
+   11  chmod +x gencsv.sh 
+   12  ./gencsv.sh 
+   13  ls
+   14  cat inputFile 
+   15  ./gencsv.sh 
+   16  cat inputFile 
+   17  cat /etc/os-release 
+   18  sudo yum update -y
+   19  sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+   20  cat /etc/system-release
+   21  sudo yum install -y httpd
+   22  sudo systemctl start httpd
+   23  sudo systemctl enable httpd
+   24  sudo usermod -a -G apache ec2-user
+   25  docker pull infracloudio/csvserver:latest
+   26  groups
+   27  sudo chown -R ec2-user:apache /var/www
+   28  sudo amazon-linux-extras install docker
+   29  sudo yum install docker
+   30  sudo service docker start
+   31  sudo usermod -a -G docker ec2-user
+   32  docker info
+   33  exit
+   34  cd /home/solution/
+   35  ls
+   36  docker info
+   37  docker -v
+   38  sudo chkconfig docker on
+   39  sudo yum install -y git
+   40  sudo reboot
+   41  sudo su -
+   42  cd /home/solution/
+   43  sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+   44  sudo chmod +x /usr/local/bin/docker-compose
+   45  docker-compose version
+   46  docker pull infracloudio/csvserver:latest
+   47  docker pull prom/prometheus:v2.22.0
+   48  docker images
+   49  docker run infracloudio/csvserver
+   50  docker ps -a
+   51  docker run infracloudio/csvserver
+   52  docker ps -a
+   53  docker attach d3bff6924d26
+   54  docker start d3bff6924d26
+   55  docker ps -a
+   56  docker attach d3bff6924d26
+   57  docker run -d -v /home/testuser/inputFile:/csvserver/inputdata infracloudio/csvserver
+   58  docker ps
+   59  docker ps -a
+   60  docker ps -a
+   61  docker run -d -v /home/solution/gencsv.sh:/csvserver/inputdata infracloudio/csvserver
+   62  docker ps -a
+   63  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+   64  docker ps -a
+   65  docker stop 2be7ffbe4c5a
+   66  docker ps -a
+   67  docker ps
+   68  docker attach 933d55ab6042
+   69  docker imahes
+   70  docker images
+   71  docker ps 
+   72  docker ps -a
+   73  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+   74  docker ps -a
+   75  docker commit stupefied_lamarr djimage
+   76  docker images
+   77  docker ps -a
+   78  docker stop c6e724bfe004
+   79  docker ps -a
+   80  docker run djimage
+   81  docker ps 
+   82  docker run -i -t djimage
+   83  curl -o ./part-1-output http://localhost:9393/raw
+   84  wget -O ./part-1-output http://localhost:9393/raw
+   85  ls
+   86  cat part-1-output 
+   87  docker logs [container_id] >& part-1-logs
+   88  ls
+   89  touch part-1-cmd
+   90  ls
+   91  docker ps -a
+   92  docker run -i -t djimage
+   93  docker ps
+   94  docker run infracloudio/csvserver
+   95  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+   96  docker ps
+   97  docker exec -it upbeat_wilbur /bin/bash
+   98  history
+   99  cd /home/solution/
+  100  ls
+  101  docker images
+  102  docker ps
+  103  docker run -d djimage
+  104  docker ps
+  105  curl localhost:9300
+  106  network.host: 0.0.0.0
+  107  cd /etc/elasticsearch/
+  108  hostname -i
+  109  docker attach 59703cb875bc
+  110  cd /var/www/
+  111  ls
+  112  cat html/
+  113  cd html/
+  114  ls
+  115  cd /home/solution/
+  116  service docker start
+  117  docker ps
+  118  docker ps -a
+  119  docker rm 304673bd58b1
+  120  docker rm d3bff6924d26
+  121  docker rm fb476db2e716
+  122  docker rm 2be7ffbe4c5a
+  123  docker rm 4d29e2f99224   infracloudio/csvserver   "/csvserver/csvserver"   15 hours ago    Exited (1) 15 hours ago                   strange_jennings
+  124  docker rm 4d29e2f99224
+  125  docker ps -a
+  126  ls
+  127  cat inputFile 
+  128  rm inputFile 
+  129  ls
+  130  ./gencsv.sh 
+  131  cat inputFile 
+  132  vim gencsv.sh 
+  133  ./gencsv.sh 
+  134  cat inputFile 
+  135  rm inputFile 
+  136  ls
+  137  ./gencsv.sh 
+  138  ls
+  139  ./gencsv.sh 
+  140  cat inputFile 
+  141  ./gencsv.sh 
+  142  cat inputFile 
+  143  docker ps
+  144  docker ps -a
+  145  docker rm 59703cb875bc
+  146  docker rm dbe57c65fdac d45f5e72713a f9b8da682e4a 2a9f1312f736
+  147  docker ps -a
+  148  ls
+  149  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+  150  docker ps
+  151  docker attach 93c4e34c3804 
+  152  docker ps
+  153  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+  154  docker ps -a
+  155  netstat -tulpn | grep LISTEN
+  156  sudo lsof -i -P -n | grep LISTEN
+  157  sudo nmap -sT -O localhost
+  158  yum install nmap -y
+  159  sudo nmap -sT -O localhost
+  160  netstat -bano | grep LISTENING
+  161  docker ps
+  162  curl localhost:5000
+  163  curl localhost:9300
+  164  cd /home/solution/
+  165  ls
+  166  vim gencsv.sh 
+  167  ls
+  168  ./gencsv.sh 
+  169  cat inputFile 
+  170  ./gencsv.sh 
+  171  cat inputFile 
+  172  docker images
+  173  docker run infracloudio/csvserver
+  174  docker ps
+  175  docker ps -a
+  176  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+  177  docker ps 
+  178  git -v
+  179  git --version
+  180  ls
+  181  docker exec -it adoring_shamir /bin/bash
+  182  docker stop d6e862fd65ad
+  183  docker ps 
+  184  ping [root@ip-172-31-37-35 solution]# docker ps
+  185  CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+  186  [root@ip-172-31-37-35 solution]#
+  187  ping http://localhost:9393/
+  188  ping 172.31.37.35
+  189  ping 13.235.244.24
+  190  cd /var/www/
+  191  ls
+  192  cd html/
+  193  ls
+  194  touch Diwakar.html
+  195  vim Diwakar.html 
+  196  cat Diwakar.html 
+  197  ls
+  198  vi /etc/httpd/conf.d/welcome.conf.
+  199  ls -a
+  200  vim Diwakar.html 
+  201  ./Diwakar.html
+  202  chmod +x Diwakar.html 
+  203  ./Diwakar.html
+  204  cd /etc/httpd/conf.d/
+  205  ls
+  206  cat autoindex.conf 
+  207  ls
+  208  cat php.conf 
+  209  ls
+  210  cat welcome.conf
+  211  vim welcome.conf
+  212  ls
+  213  cat userdir.conf 
+  214  find - a index.html
+  215  find index.html
+  216  cd /home/solution/
+  217  ls
+  218  docker images
+  219  docker exec -it 1dfbc071b252 /bin/bash
+  220  docker run -it 1dfbc071b252 /bin/bash
+  221  docker ps
+  222  docker rm dhimage
+  223  docker rm djimage
+  224  docker images
+  225  docker rm 1dfbc071b252
+  226  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+  227  docker ps
+  228  docker attach 6de388120b92
+  229  docker exec -it upbeat_dijkstra /bin/bash
+  230  docker ps
+  231  docker exec -it upbeat_dijkstra /bin/bash
+  232  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+  233  docker exec -it upbeat_dijkstra /bin/bash
+  234  docker run -d -v /home/solution/inputFile:/csvserver/inputdata infracloudio/csvserver
+  235  docker ps
+  236  docker exec -it hopeful_hypatia /bin/bash
+  237  docker commit 66f1fd140693 djnew
+  238  docker images
+  239  docker ps
+  240  docker stop 66f1fd140693
+  241  docker stop 80c80ff37361
+  242  docker ps
+  243  docker inmages
+  244  docker images
+  245  docker run 652fa434bc64
+  246  docker ps
+  247  udo lsof -i -P -n | grep LISTEN
+  248  sudo lsof -i -P -n | grep LISTEN
+  249  sudo netstat -tulpn | grep LISTEN
+  250  docker run --publish 8000:8000 djnew
+  251  docker run -d -p 8000:8000 djnew
+  252  docker ps
+  253  docker exec -it objective_kapitsa /bin/bash
+  254  docker run -d -p 8000:8000 djimage
+  255* docker run -
+  256  docker run -d  djimage
+  257  docker ps
+  258  docker exec -it optimistic_brahmagupta /bin/bash
+  259  ls
+  260  history 
+  261  history > historycmd.txt
